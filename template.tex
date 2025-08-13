@@ -1,0 +1,238 @@
+%-------------------------
+% Master Resume Template
+% Author : [Your Name]
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% Latin Modern Sans (Default - OFL Licensed)
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Alternative font options (uncomment to use):
+% Helvetica/Arial-like
+%\usepackage[T1]{fontenc}
+%\usepackage{tgheros}
+%\renewcommand{\familydefault}{\sfdefault}
+
+% Open-source sans-serif alternatives
+% \usepackage[sfdefault]{FiraSans}      % Mozilla Public License
+% \usepackage[sfdefault]{roboto}         % Apache License 2.0
+% \usepackage[sfdefault]{noto-sans}      % Apache License 2.0
+% \usepackage[default]{sourcesanspro}    % OFL License
+
+% Open-source serif alternatives
+% \usepackage{CormorantGaramond}         % OFL License
+% \usepackage{charter}                   % Public Domain
+
+%\renewcommand{\familydefault}{\sfdefault}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% Configure hyperref for better link handling
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+    citecolor=black,
+    filecolor=black
+}
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+	\textbf{\Huge \scshape \name} \\ \vspace{1pt}
+	\small \location\ \textbar\ \small \phone\ \textbar\ \href{mailto:\email}{\email}\ \textbar\ \href{\linkedinurl}{\linkedintext}\ \textbar\ \href{\githuburl}{\githubtext}
+\end{center}
+  
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+  
+  	\resumeSubheading
+  		{\university}{\universitydates}
+  		{\degree\ \textbar\ GPA: \gpa}{\universitylocation}
+  		\resumeItemListStart
+  			\resumeItem{\textbf{Relevant Coursework}: \coursework}
+  			\resumeItem{\textbf{Competitions}: \competitions}
+  			\resumeItem{\textbf{Clubs}: \clubs}
+		\resumeItemListEnd
+		
+	\resumeSubHeadingListEnd
+  
+  %-----------TECHNICAL SKILLS-----------
+ \section{Technical Skills}
+ 	\begin{itemize}[leftmargin=0.15in, label={}]
+ 		\small{\item{
+ 				\textbf{Languages}{: \languages} \\
+ 				\textbf{Frameworks \& Libraries}{: \frameworks} \\
+ 				\textbf{Cloud \& Databases}{: \clouddatabases} \\
+ 				\textbf{DevOps \& Tools}{: \devopstools} \\
+ 		}}
+ 	\end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+      
+      % Experience 1
+      \if\exponeenabled1
+        \resumeSubheading
+        	{\exponecompany}{\exponedates}
+        	{\exponeposition}{\exponelocation}
+        	\resumeItemListStart
+        		\resumeItem{\exponeitemone}
+        		\resumeItem{\exponeitemtwo}
+        		\resumeItem{\exponeitemthree}
+        		\resumeItem{\exponeitemfour}
+        		\resumeItem{\exponeitemfive}
+       	\resumeItemListEnd
+      \fi
+     	
+      % Experience 2
+      \if\exptwoenabled1
+        \resumeSubheading
+        	{\exptwocompany}{\exptwodates}
+        	{\exptwoposition}{\exptwolocation}
+        	\resumeItemListStart
+        	\resumeItem{\exptwoitemone}
+        	\resumeItem{\exptwoitemtwo}
+        	\resumeItem{\exptwoitemthree}
+        	\resumeItem{\exptwoitemfour}
+        	\resumeItem{\exptwoitemfive}
+       	\resumeItemListEnd
+      \fi
+   	
+      % Experience 3
+      \if\expthreeenabled1
+       	\resumeSubheading
+       		{\expthreecompany}{\expthreedates}
+       		{\expthreeposition}{\expthreelocation}
+       		\resumeItemListStart
+       			\resumeItem{\expthreeitemone}
+       			\resumeItem{\expthreeitemtwo}
+       			\resumeItem{\expthreeitemthree}
+       			\resumeItem{\expthreeitemfour}
+       			\resumeItem{\expthreeitemfive}
+      		\resumeItemListEnd
+      \fi
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+          
+          % Project 1
+          \if\projectoneenabled1
+            \resumeProjectHeading
+            	{\projectoneurl}{\projectonedates}
+            	\resumeItemListStart
+            		\resumeItem{\projectoneitemone}
+            		\resumeItem{\projectoneitemtwo}
+            		\resumeItem{\projectoneitemthree}
+            		\resumeItem{\projectoneitemfour}
+            		\resumeItem{\projectoneitemfive}
+           	\resumeItemListEnd
+          \fi
+         	
+          % Project 2
+          \if\projecttwoenabled1
+         	 \resumeProjectHeading
+         	 	{\projecttwourl}{\projecttwodates}
+         	 	\resumeItemListStart
+         	 		\resumeItem{\projecttwoitemone}
+         	 		\resumeItem{\projecttwoitemtwo}
+         	 		\resumeItem{\projecttwoitemthree}
+         	 		\resumeItem{\projecttwoitemfour}
+         	 		\resumeItem{\projecttwoitemfive}
+         	 	\resumeItemListEnd
+          \fi
+          
+    \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}

@@ -1,0 +1,28 @@
+%-------------------------
+% Short Co-op Resume Wrapper (1-page version)
+%------------------------
+
+% Include default values first
+\input{defaults.tex}
+
+% Override only what's different for this resume version
+\def\email{[your.email@example.com]}
+
+% Toggle experiences - only show the most recent one
+\def\exponeenabled{1}  % Keep most recent experience
+\def\exptwoenabled{0}  % Hide second experience
+\def\expthreeenabled{0} % Hide third experience
+
+% Expand and customize the most recent experience for this version
+\def\exponeitemone{Developed and maintained web applications using modern JavaScript frameworks, improving user experience and performance by 40\%.}
+\def\exponeitemtwo{Built RESTful APIs and microservices using Node.js and Express, handling thousands of requests per day with 99.9\% uptime.}
+\def\exponeitemthree{Collaborated with cross-functional teams using Agile methodologies, participating in sprint planning and code reviews.}
+\def\exponeitemfour{Implemented automated testing using Jest and Cypress, achieving 90\% code coverage and reducing bug reports by 40\%.}
+\def\exponeitemfive{Optimized database queries and implemented caching strategies, reducing response times by 60\%.}
+
+% Toggle projects - only show the main one
+\def\projectoneenabled{1} % Keep main project
+\def\projecttwoenabled{0} % Hide second project
+
+% Include the master resume template
+\input{template.tex}
