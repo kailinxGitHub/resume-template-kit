@@ -2,6 +2,8 @@
 
 A comprehensive LaTeX-based resume system with an interactive generator tool for creating customized resume templates. This kit provides both automated generation and manual customization options for professional resume creation.
 
+> **Credits**: This template is based on [Jake's Resume](https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs), a popular LaTeX resume template. We've extended it with an interactive generator tool and additional customization options.
+
 ## 📄 **License**
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
