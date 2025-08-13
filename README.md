@@ -2,6 +2,10 @@
 
 A comprehensive LaTeX-based resume system with an interactive generator tool for creating customized resume templates. This kit provides both automated generation and manual customization options for professional resume creation.
 
+## 📄 **License**
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 ## 🎨 **Font Licensing**
 
 The template uses open-source fonts with the following licenses:
