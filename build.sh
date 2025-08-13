@@ -18,21 +18,24 @@ find . -name "*.synctex.gz" -delete
 
 echo "📄 Building all resume versions..."
 
-# Automatically detect all .tex files in the specifics folder
-resumes=($(find specifics -name "*.tex" -exec basename {} .tex \;))
+# Create output directory if it doesn't exist
+mkdir -p output
+
+# Automatically detect all .tex files in the variants folder (excluding files starting with _)
+resumes=($(find variants -name "*.tex" ! -name "_*.tex" -exec basename {} .tex \;))
 
 # Build each resume from the root directory
 for resume in "${resumes[@]}"; do
     echo "  Building $resume.tex..."
     
-    # Compile from root directory, specifying the path to the .tex file
-    # Log output to a specific file for this resume
-    pdflatex -interaction=nonstopmode "specifics/$resume.tex" > "${resume}_build.log" 2>&1
+    # Compile the variant file directly (it includes defaults.tex and template.tex)
+    pdflatex -interaction=nonstopmode "variants/$resume.tex" > "${resume}_build.log" 2>&1
     
-    if [ $? -eq 0 ]; then
+    # Check if PDF was created (LaTeX can succeed even with warnings)
+    if [ -f "$resume.pdf" ]; then
         echo "  ✅ $resume.pdf created successfully"
         # Move PDF to output directory
-        mv "$resume.pdf" "output/"
+        mv "$resume.pdf" "output/$resume.pdf"
         # Remove successful build log
         rm -f "${resume}_build.log"
     else

@@ -125,7 +125,8 @@
 %----------HEADING----------
 \begin{center}
 	\textbf{\Huge \scshape \name} \\ \vspace{1pt}
-	\small \location\ \textbar\ \small \phone\ \textbar\ \href{mailto:\email}{\email}\ \textbar\ \href{\linkedinurl}{\linkedintext}\ \textbar\ \href{\githuburl}{\githubtext}
+	\small \location\ \textbar\ \small \phone\ \textbar\ \href{mailto:\email}{\underline{\email}}\ \textbar\ \href{\linkedinurl}{\underline{\linkedintext}}\ \textbar\ \href{\githuburl}{\underline{\githubtext}}
+	\ifx\availability\empty\else \\ \vspace{2pt} \small \availability\fi
 \end{center}
   
 %-----------EDUCATION-----------
